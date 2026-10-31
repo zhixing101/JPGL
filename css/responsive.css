@@ -1,0 +1,13 @@
+/* ===== responsive.css — 平板 / 手机适配 ===== */
+/* 平板及以下:Hero 改单列,图片置顶 */
+@media (max-width: 820px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-grid figure { order: -1; }
+  .rate-box { grid-template-columns: 1fr; }
+  .form { grid-template-columns: 1fr; }
+}
+/* 手机:按钮上下排列 */
+@media (max-width: 480px) {
+  .btn-outline { margin: 10px 0 0; }
+  section { padding: 36px 0; }
+}

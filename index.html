@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+  Japan GroundLink — B2B 地面交通 Demo 首页
+  所有可见文字都来自 i18n/*.js:元素上的 data-i18n="键" 会在加载时被替换。
+    data-i18n="键"            → 整段文字
+    data-i18n-part="0|1"      → 文字含 "标题|说明" 时取第几段
+    data-i18n-ph="键"         → 输入框 placeholder
+    data-pax="5"              → 使用 fleet.pax 并把 {n} 换成数字
+    data-site="email"         → 来自 data/site.js 的公司资料
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Japan GroundLink</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ① 顶部导航 + 语言选择 -->
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="#top">
+      <svg width="34" height="28" viewBox="0 0 34 28" aria-hidden="true"><path d="M1 26 13 6l5 8 4-5 11 17z" fill="#2a7de1"/><path d="M13 6l-3.5 6 3 1.5 2-2 2 2.5 2.5-1z" fill="#fff"/></svg>
+      Japan GroundLink
+    </a>
+    <nav class="main-nav">
+      <a href="#why" data-i18n="nav.why"></a>
+      <a href="#rates" data-i18n="nav.rates"></a>
+      <a href="#fleet" data-i18n="nav.fleet"></a>
+      <a href="#process" data-i18n="nav.process"></a>
+      <a href="#apply" data-i18n="nav.contact"></a>
+    </nav>
+    <select id="lang-select" aria-label="Language"></select>
+  </div>
+</header>
+
+<!-- ② 首屏 Hero:左文案 + 右图 -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge" data-i18n="hero.badge"></span>
+      <p class="eyebrow" data-i18n="hero.explore"></p>
+      <h1 data-i18n="hero.title"></h1>
+      <p class="lead" data-i18n="hero.text"></p>
+      <a class="btn" href="#apply" data-i18n="hero.cta"></a>
+      <a class="btn btn-outline" href="#why" data-i18n="hero.cap"></a>
+    </div>
+    <figure>
+      <img src="assets/images/hero.jpg" alt="Mount Fuji and Lake Kawaguchiko with cherry blossoms">
+      <figcaption data-i18n="hero.sub"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ③ 信任栏 -->
+<div class="trust">
+  <div class="wrap trust-list">
+    <span>✓ <b data-i18n="trust.1"></b></span><span>✓ <b data-i18n="trust.2"></b></span>
+    <span>✓ <b data-i18n="trust.3"></b></span><span>✓ <b data-i18n="trust.4"></b></span>
+  </div>
+</div>
+
+<!-- ④ 合作优势 6 项 + 客户保护 -->
+<section id="why">
+  <div class="wrap">
+    <h2 data-i18n="why.title"></h2>
+    <div class="grid grid-why">
+      <article class="card"><i class="num">01</i><h3 data-i18n="why.1" data-i18n-part="0"></h3><p data-i18n="why.1" data-i18n-part="1"></p></article>
+      <article class="card"><i class="num">02</i><h3 data-i18n="why.2" data-i18n-part="0"></h3><p data-i18n="why.2" data-i18n-part="1"></p></article>
+      <article class="card"><i class="num">03</i><h3 data-i18n="why.3" data-i18n-part="0"></h3><p data-i18n="why.3" data-i18n-part="1"></p></article>
+      <article class="card"><i class="num">04</i><h3 data-i18n="why.4" data-i18n-part="0"></h3><p data-i18n="why.4" data-i18n-part="1"></p></article>
+      <article class="card"><i class="num">05</i><h3 data-i18n="why.5" data-i18n-part="0"></h3><p data-i18n="why.5" data-i18n-part="1"></p></article>
+      <article class="card"><i class="num">06</i><h3 data-i18n="why.6" data-i18n-part="0"></h3><p data-i18n="why.6" data-i18n-part="1"></p></article>
+    </div>
+    <div class="callout"><h3 data-i18n="protect" data-i18n-part="0"></h3><p data-i18n="protect" data-i18n-part="1"></p></div>
+  </div>
+</section>
+
+<!-- ⑤ 服务(图标取自上传图片) -->
+<section class="alt" id="services">
+  <div class="wrap">
+    <h2 data-i18n="nav.services"></h2>
+    <div class="grid grid-svc">
+      <div class="svc"><img src="assets/images/ic1.jpg" alt=""><b data-i18n="svc.1" data-i18n-part="0"></b><span data-i18n="svc.1" data-i18n-part="1"></span></div>
+      <div class="svc"><img src="assets/images/ic2.jpg" alt=""><b data-i18n="svc.2" data-i18n-part="0"></b><span data-i18n="svc.2" data-i18n-part="1"></span></div>
+      <div class="svc"><img src="assets/images/ic3.jpg" alt=""><b data-i18n="svc.3" data-i18n-part="0"></b><span data-i18n="svc.3" data-i18n-part="1"></span></div>
+      <div class="svc"><img src="assets/images/ic4.jpg" alt=""><b data-i18n="svc.4" data-i18n-part="0"></b><span data-i18n="svc.4" data-i18n-part="1"></span></div>
+      <div class="svc"><img src="assets/images/ic5.jpg" alt=""><b data-i18n="svc.5" data-i18n-part="0"></b><span data-i18n="svc.5" data-i18n-part="1"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ B2B 参考净价估算(演示;数据在 data/rates.js) -->
+<section id="rates">
+  <div class="wrap narrow">
+    <h2 data-i18n="rates.title"></h2>
+    <div class="rate-box">
+      <label><span data-i18n="rates.route"></span><select id="rate-route"></select></label>
+      <label><span data-i18n="rates.car"></span><select id="rate-car"></select></label>
+      <div class="rate-out"><small data-i18n="rates.price"></small><strong id="rate-price">—</strong></div>
+    </div>
+    <p class="note" data-i18n="rates.note"></p>
+  </div>
+</section>
+
+<!-- ⑦ 灵活服务 -->
+<section class="band-light">
+  <div class="wrap narrow center"><h2 data-i18n="flex" data-i18n-part="0"></h2><p class="lead" data-i18n="flex" data-i18n-part="1"></p></div>
+</section>
+
+<!-- ⑧ 车队(图片取自上传图片) -->
+<section class="alt" id="fleet">
+  <div class="wrap">
+    <h2 data-i18n="fleet.title"></h2>
+    <div class="grid grid-fleet">
+      <div class="fleet-card"><img src="assets/images/v1.jpg" alt="Toyota Alphard"><div class="pill"><b>Alphard</b><small data-i18n="fleet.pax" data-pax="5"></small></div></div>
+      <div class="fleet-card"><img src="assets/images/v2.jpg" alt="Toyota HiAce"><div class="pill"><b>HiAce</b><small data-i18n="fleet.pax" data-pax="9"></small></div></div>
+      <div class="fleet-card"><img src="assets/images/v3.jpg" alt="Toyota Coaster"><div class="pill"><b>Coaster</b><small data-i18n="fleet.pax" data-pax="20"></small></div></div>
+      <div class="fleet-card"><img src="assets/images/v4.jpg" alt="Bus Grande"><div class="pill"><b>Bus Grande</b><small data-i18n="fleet.pax" data-pax="49"></small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ 目的地(拍立得风格) -->
+<section id="destinations">
+  <div class="wrap">
+    <h2 data-i18n="dest.title"></h2>
+    <div class="grid grid-dest">
+      <figure class="polaroid"><img src="assets/images/d1.jpg" alt="Mount Fuji"><figcaption>Mount Fuji</figcaption></figure>
+      <figure class="polaroid"><img src="assets/images/d2.jpg" alt="Pagoda Chureito"><figcaption>Pagoda Chureito</figcaption></figure>
+      <figure class="polaroid"><img src="assets/images/d3.jpg" alt="Oshino Hakkai"><figcaption>Oshino Hakkai</figcaption></figure>
+      <figure class="polaroid"><img src="assets/images/d4.jpg" alt="Oishi Park"><figcaption>Oishi Park</figcaption></figure>
+      <figure class="polaroid"><img src="assets/images/d5.jpg" alt="Lake Kawaguchiko Shopping Center"><figcaption>Lake Kawaguchiko Shopping Center</figcaption></figure>
+      <figure class="polaroid"><img src="assets/images/d6.jpg" alt="Tokyo"><figcaption>Tokyo</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ⑩ 品牌口号带 -->
+<div class="band"><div class="band-title" data-i18n="band.tags"></div><p data-i18n="band.tag"></p></div>
+
+<!-- ⑪ 合作流程 3 步 -->
+<section id="process">
+  <div class="wrap">
+    <h2 data-i18n="nav.process"></h2>
+    <div class="grid grid-proc">
+      <article class="card step"><i class="num">01</i><h3 data-i18n="proc.1" data-i18n-part="0"></h3><p data-i18n="proc.1" data-i18n-part="1"></p></article>
+      <article class="card step"><i class="num">02</i><h3 data-i18n="proc.2" data-i18n-part="0"></h3><p data-i18n="proc.2" data-i18n-part="1"></p></article>
+      <article class="card step"><i class="num">03</i><h3 data-i18n="proc.3" data-i18n-part="0"></h3><p data-i18n="proc.3" data-i18n-part="1"></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ⑫ 联系 + B2B 申请表(演示:不会发送数据) -->
+<section class="alt" id="apply">
+  <div class="wrap narrow">
+    <h2 data-i18n="apply.title"></h2>
+    <ul class="contact-info">
+      <li>✉ <span data-site="email"></span></li><li>☎ <span data-site="whatsapp"></span></li>
+      <li>⌂ <span data-site="address"></span></li><li>§ <span data-site="license"></span></li>
+    </ul>
+    <div class="form">
+      <input id="f-company" data-i18n-ph="apply.company"><input id="f-country" data-i18n-ph="apply.country">
+      <input id="f-contact" data-i18n-ph="apply.contact"><input id="f-email" data-i18n-ph="apply.email">
+      <input id="f-volume" class="full" data-i18n-ph="apply.volume">
+      <label class="full check"><input type="checkbox" id="f-consent"> <span data-i18n="apply.consent"></span></label>
+      <div class="full center"><button class="btn" id="f-send" data-i18n="apply.send"></button></div>
+    </div>
+    <div id="form-status" class="status"></div>
+  </div>
+</section>
+
+<!-- ⑬ 页脚 -->
+<footer class="site-footer">
+  <div class="discover"><i></i><span data-i18n="footer.discover"></span><i></i></div>
+  <p data-i18n="footer.note"></p>
+  <p class="copy">© Japan GroundLink · Demo</p>
+</footer>
+
+<!-- 脚本加载顺序:数据 → 翻译 → 逻辑 -->
+<script src="data/site.js"></script>
+<script src="data/rates.js"></script>
+<script src="i18n/en.js"></script><script src="i18n/zh-CN.js"></script><script src="i18n/zh-TW.js"></script>
+<script src="i18n/ja.js"></script><script src="i18n/ko.js"></script><script src="i18n/vi.js"></script>
+<script src="i18n/es.js"></script><script src="i18n/pt.js"></script><script src="i18n/fr.js"></script>
+<script src="i18n/de.js"></script><script src="i18n/it.js"></script><script src="i18n/ru.js"></script>
+<script src="i18n/el.js"></script><script src="i18n/he.js"></script><script src="i18n/ar.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/rates.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

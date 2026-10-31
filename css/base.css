@@ -1,0 +1,38 @@
+/* ===== base.css — 颜色变量、重置、排版、深色模式 ===== */
+:root {
+  /* 品牌色:深蓝(导航/按钮)+ 亮蓝(强调)+ 天空蓝(浅背景) */
+  --navy: #0f3a6b;
+  --blue: #2a7de1;
+  --sky:  #e8f3ff;
+  --bg:   #ffffff;
+  --fg:   #14233a;
+  --mut:  #5b6b82;
+  --card: #ffffff;
+  --line: #d5e3f5;
+  --head: var(--navy);           /* 标题颜色(深色模式下变浅) */
+  color-scheme: light dark;
+  box-sizing: border-box;
+  /* 手机刘海/底部横条安全区 */
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+/* 跟随系统深色模式 */
+@media (prefers-color-scheme: dark) {
+  :root { --navy:#0a2748; --sky:#10233f; --bg:#0b1627; --fg:#e8f0fb; --mut:#9db0c9; --card:#12233b; --line:#25405f; --head:#dcebff; }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg); line-height: 1.65; font-size: 16px;
+  /* 系统字体栈:覆盖中日韩、拉丁、西里尔、希腊、希伯来、阿拉伯 */
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "PingFang SC", "PingFang TC",
+               "Microsoft YaHei", "Malgun Gothic", Roboto, "Noto Sans", sans-serif;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h2 { font-size: clamp(24px, 4vw, 34px); color: var(--head); margin: 0 0 24px; text-align: center; }
+h3 { margin: 0 0 6px; color: var(--head); }
+select, input, textarea {
+  font: inherit; color: var(--fg); background: var(--card);
+  border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; width: 100%;
+}

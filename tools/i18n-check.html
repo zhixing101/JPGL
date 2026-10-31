@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- 翻译检查工具:本地直接打开即可。上方显示各语言完整度;选择语言后可与英文逐条对照。 -->
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>i18n 检查</title>
+<style>
+body{font:15px/1.5 system-ui,"Microsoft YaHei",sans-serif;margin:16px;max-width:1100px}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd;padding:6px 8px;vertical-align:top;text-align:start}
+th{background:#eef3fb}.miss{background:#ffe3e3;color:#b00}code{color:#06c}.bar{display:inline-block;height:8px;background:#2a7de1;border-radius:4px}
+</style></head><body>
+<h1>翻译完整度 / Translation check</h1><div id="sum"></div>
+<p>对照语言:<select id="sel"></select>(红色 = 缺失,运行时会回退到英文)</p><table id="tb"></table>
+<script src="../i18n/en.js"></script><script src="../i18n/zh-CN.js"></script><script src="../i18n/zh-TW.js"></script><script src="../i18n/ja.js"></script>
+<script src="../i18n/ko.js"></script><script src="../i18n/vi.js"></script><script src="../i18n/es.js"></script><script src="../i18n/pt.js"></script>
+<script src="../i18n/fr.js"></script><script src="../i18n/de.js"></script><script src="../i18n/it.js"></script><script src="../i18n/ru.js"></script>
+<script src="../i18n/el.js"></script><script src="../i18n/he.js"></script><script src="../i18n/ar.js"></script>
+<script>
+var I=window.I18N,keys=Object.keys(I.en),$=function(s){return document.querySelector(s)};
+var sum='<table><tr><th>语言</th><th>完成</th><th>缺失键数</th></tr>';
+Object.keys(I).forEach(function(l){var n=keys.filter(function(k){return I[l][k]!==undefined}).length,p=Math.round(n/keys.length*100);
+ sum+='<tr><td>'+l+'</td><td><span class="bar" style="width:'+p*1.5+'px"></span> '+p+'% ('+n+'/'+keys.length+')</td><td>'+(keys.length-n)+'</td></tr>';
+ $('#sel').add(new Option(l,l))});
+$('#sum').innerHTML=sum+'</table>';
+function show(){var l=$('#sel').value,h='<tr><th>键</th><th>English</th><th>'+l+'</th></tr>';
+ keys.forEach(function(k){var v=I[l][k];h+='<tr><td><code>'+k+'</code></td><td>'+I.en[k]+'</td><td'+(v===undefined?' class="miss">—':'>'+v)+'</td></tr>'});
+ $('#tb').innerHTML=h;document.documentElement.dir=(l==='he'||l==='ar')?'rtl':'ltr'}
+$('#sel').onchange=show;$('#sel').value='zh-TW';show();
+</script></body></html>
