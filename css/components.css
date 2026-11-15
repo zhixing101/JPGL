@@ -95,3 +95,22 @@ section { padding: 48px 0; }
 .discover i { flex: 1; max-width: 160px; height: 1px; background: #fff6; }
 .site-footer p { margin: 10px auto 0; max-width: 720px; opacity: .85; font-size: 14px; }
 .site-footer .copy { opacity: .6; font-size: 13px; }
+
+/* ---- 价格标签与附加项(js/rates.js)---- */
+.tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+.tabs button { padding: 8px 18px; border-radius: 999px; border: 2px solid var(--navy); background: transparent; color: var(--head); font: 700 15px/1.3 inherit; cursor: pointer; }
+.tabs button.on { background: var(--navy); color: #fff; }
+.rate-box { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.rate-box [hidden] { display: none !important; }
+.rate-box .check { display: flex; align-items: center; gap: 8px; align-self: center; }
+.rate-box .check input { width: auto; }
+.rate-out em { font-style: normal; display: block; font-size: 13px; margin-top: 2px; }
+.rate-out em.est { color: #b7791f; } .rate-out em.ok { color: #1a9d5c; }
+.ok-line { color: var(--head); font-weight: 600; }
+/* ---- 联系卡片与二维码 ---- */
+.contact-card { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 20px; }
+.contact-card .contact-info { text-align: start; margin: 0; }
+.contact-card a { color: var(--blue); text-decoration: underline; }
+.qrs { display: flex; gap: 16px; }
+.qrs figure { margin: 0; text-align: center; font-size: 13px; color: var(--mut); }
+.qrs img { width: 150px; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 4px; }

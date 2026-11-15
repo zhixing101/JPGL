@@ -29,7 +29,6 @@ window.I18N['de'] = {
   'band.tag': 'Machen Sie Ihre Japanreise einfacher und schöner!',
   'cta.quote': 'Angebot anfragen',
   // ── 申请表 / Application ──
-  'form.ok': 'Danke! (Demo: nichts wurde gesendet.)',
   // ── 页脚 / Footer ──
   'footer.discover': 'Mehr von Japan entdecken',
 };

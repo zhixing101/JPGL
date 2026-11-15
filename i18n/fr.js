@@ -29,7 +29,6 @@ window.I18N['fr'] = {
   'band.tag': 'Rendez votre voyage au Japon plus facile et plus agréable !',
   'cta.quote': 'Demander un devis',
   // ── 申请表 / Application ──
-  'form.ok': 'Merci ! (Démo : rien n’a été envoyé.)',
   // ── 页脚 / Footer ──
   'footer.discover': 'Découvrez plus du Japon',
 };

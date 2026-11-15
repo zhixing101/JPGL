@@ -29,7 +29,6 @@ window.I18N['vi'] = {
   'band.tag': 'Giúp chuyến đi Nhật Bản của bạn dễ dàng và thú vị hơn!',
   'cta.quote': 'Nhận báo giá',
   // ── 申请表 / Application ──
-  'form.ok': 'Cảm ơn! (Bản demo: chưa gửi dữ liệu.)',
   // ── 页脚 / Footer ──
   'footer.discover': 'Khám phá thêm Nhật Bản',
 };

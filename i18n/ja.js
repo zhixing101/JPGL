@@ -42,11 +42,11 @@ window.I18N['ja'] = {
   'why.6': '旅行中のサポート|遅延や変更に直接対応。',
   'protect': 'お客様は常に貴社のお客様です。|提携先の乗客情報を直接営業に使わず、貴社を介さない勧誘もしません。',
   // ── 价格 / Rates ──
-  'rates.title': 'B2B参考ネット料金(デモ値)',
+  'rates.title': 'B2B参考ネット料金',
   'rates.route': '区間',
   'rates.car': '車両',
   'rates.price': '参考ネット料金',
-  'rates.note': 'デモ用の数値です。税・高速・駐車料金込み。正式料金は旅行会社の審査後に確定します。',
+  'rates.note': '旅行会社・運行会社・DMC向けの参考料金です。「参考見積」と表示された金額は正式見積ではありません。正式料金は審査後に確定します。',
   // ── 车队 / Fleet ──
   'fleet.title': '車両ラインナップ',
   'fleet.pax': '{n}名乗り',
@@ -63,7 +63,7 @@ window.I18N['ja'] = {
   'proc.2': '枠組みの確認|ニーズを確認し条件を決定します。',
   'proc.3': '最初のご依頼|車両・ルート・含まれる内容を確認します。',
   // ── 申请表 / Application ──
-  'form.ok': 'ありがとうございます!(デモのため送信されません)',
+  'form.ok': 'ありがとうございます!メールアプリが開きますので、内容を確認して送信してください。',
   'apply.title': 'B2B提携のお申し込み',
   'apply.company': '会社名',
   'apply.country': '国・主要市場',
@@ -75,4 +75,19 @@ window.I18N['ja'] = {
   // ── 页脚 / Footer ──
   'footer.discover': 'もっと日本を発見',
   'footer.note': 'B2B専用:審査済みの旅行会社・DMCのみ対応。個人のお客様の直接予約は承っておりません。',
+  // ── 价格工具与联系(新增)──
+  'rates.tab.airport': '空港送迎',
+  'rates.tab.p2p': '地点間送迎',
+  'rates.tab.charter': '10時間チャーター',
+  'rates.dir': '方向',
+  'rates.dir.pickup': '空港お迎え',
+  'rates.dir.dropoff': '空港お見送り',
+  'rates.km': '距離(km)',
+  'rates.board': '名札でお出迎え +¥5,000',
+  'rates.seat': 'チャイルドシート(1台 +¥5,000)',
+  'rates.included': '✓ 税込 ✓ 高速料金込み ✓ 駐車料金込み',
+  'rates.tag.est': '参考見積',
+  'rates.tag.ok': '確定料金',
+  'contact.email': 'メール',
+  'contact.scan': 'QRで連絡',
 };

@@ -42,11 +42,11 @@ window.I18N['zh-CN'] = {
   'why.6': '旅中协助|航班延误与变更有直接联系渠道。',
   'protect': '您的客户,始终属于您。|我们不会用合作方的乘客资料做直接营销,也不会绕过您招揽客户。',
   // ── 价格 / Rates ──
-  'rates.title': 'B2B 参考净价(演示数值)',
+  'rates.title': 'B2B 参考净价',
   'rates.route': '路线',
   'rates.car': '车型',
   'rates.price': '参考净价',
-  'rates.note': '仅为演示数值,含税、高速费与停车费;最终价格待旅行社审核后确认。',
+  'rates.note': '仅供旅行社、旅游业者及 DMC 参考。标注“参考估价”的不是正式报价;正式价格在旅行社审核后确认。',
   // ── 车队 / Fleet ──
   'fleet.title': '我们的车队',
   'fleet.pax': '{n} 位乘客',
@@ -63,7 +63,7 @@ window.I18N['zh-CN'] = {
   'proc.2': '确认合作框架|评估需求并确认条款。',
   'proc.3': '发送第一笔需求|确认车型、路线与包含项目。',
   // ── 申请表 / Application ──
-  'form.ok': '谢谢!(演示页面,未发送任何数据)',
+  'form.ok': '谢谢!邮件应用将打开,请确认内容后发送。',
   'apply.title': 'B2B 合作申请',
   'apply.company': '旅行社 / 公司名称',
   'apply.country': '国家或主要市场',
@@ -75,4 +75,19 @@ window.I18N['zh-CN'] = {
   // ── 页脚 / Footer ──
   'footer.discover': '发现更多日本',
   'footer.note': '仅限 B2B:服务经核实的旅行社、旅游业者与 DMC,不接受个人旅客直接预订。',
+  // ── 价格工具与联系(新增)──
+  'rates.tab.airport': '机场接送',
+  'rates.tab.p2p': '点对点接送',
+  'rates.tab.charter': '10小时包车',
+  'rates.dir': '方向',
+  'rates.dir.pickup': '机场接机',
+  'rates.dir.dropoff': '机场送机',
+  'rates.km': '距离(公里)',
+  'rates.board': '举牌接机 +¥5,000',
+  'rates.seat': '儿童安全座椅(每张 +¥5,000)',
+  'rates.included': '✓ 已含税 ✓ 已含高速公路费 ✓ 已含停车费',
+  'rates.tag.est': '参考估价',
+  'rates.tag.ok': '确认价格',
+  'contact.email': '邮箱',
+  'contact.scan': '扫码联系',
 };

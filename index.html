@@ -12,7 +12,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Japan GroundLink修改</title>
+  <title>Japan GroundLink</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -97,12 +97,26 @@
 <section id="rates">
   <div class="wrap narrow">
     <h2 data-i18n="rates.title"></h2>
-    <div class="rate-box">
-      <label><span data-i18n="rates.route"></span><select id="rate-route"></select></label>
-      <label><span data-i18n="rates.car"></span><select id="rate-car"></select></label>
-      <div class="rate-out"><small data-i18n="rates.price"></small><strong id="rate-price">—</strong></div>
+    <!-- 三个标签:机场接送 / 点对点 / 10 小时包车(js/rates.js 控制显示哪些输入项) -->
+    <div class="tabs" id="rate-tabs">
+      <button data-t="airport" class="on" data-i18n="rates.tab.airport"></button>
+      <button data-t="p2p" data-i18n="rates.tab.p2p"></button>
+      <button data-t="charter" data-i18n="rates.tab.charter"></button>
     </div>
+    <div class="rate-box">
+      <label id="r-route"><span data-i18n="rates.route"></span><select id="rate-route"></select></label>
+      <label id="r-dir"><span data-i18n="rates.dir"></span>
+        <select id="rate-dir"><option value="pickup" data-i18n="rates.dir.pickup"></option><option value="dropoff" data-i18n="rates.dir.dropoff"></option></select></label>
+      <label id="r-km" hidden><span data-i18n="rates.km"></span><input id="rate-km" type="number" min="1" value="30"></label>
+      <label id="r-car"><span data-i18n="rates.car"></span><select id="rate-car"></select></label>
+      <label id="r-board" class="check"><input type="checkbox" id="rate-board"> <span data-i18n="rates.board"></span></label>
+      <label id="r-seat"><span data-i18n="rates.seat"></span><input id="rate-seat" type="number" min="0" max="4" value="0"></label>
+      <div class="rate-out"><small data-i18n="rates.price"></small><strong id="rate-price">—</strong><em id="rate-tag"></em></div>
+    </div>
+    <p class="note" id="rate-cap"></p>
+    <p class="note ok-line" data-i18n="rates.included"></p>
     <p class="note" data-i18n="rates.note"></p>
+    <p class="center"><a class="btn" href="#apply" data-i18n="hero.cta"></a></p>
   </div>
 </section>
 
@@ -158,10 +172,19 @@
 <section class="alt" id="apply">
   <div class="wrap narrow">
     <h2 data-i18n="apply.title"></h2>
-    <ul class="contact-info">
-      <li>✉ <span data-site="email"></span></li><li>☎ <span data-site="whatsapp"></span></li>
-      <li>⌂ <span data-site="address"></span></li><li>§ <span data-site="license"></span></li>
-    </ul>
+    <!-- 联系方式:邮箱、Instagram、WhatsApp Business 二维码(资料在 data/site.js) -->
+    <div class="contact-card">
+      <ul class="contact-info">
+        <li>✉ <span data-i18n="contact.email"></span>: <a data-site="email"></a></li>
+        <li>◎ Instagram: <a data-site="instagram" target="_blank" rel="noopener"></a></li>
+        <li>☎ <span data-site="whatsapp"></span></li>
+        <li>⌂ <span data-site="address"></span></li><li>§ <span data-site="license"></span></li>
+      </ul>
+      <div class="qrs">
+        <figure><img src="assets/images/qr-whatsapp.png" alt="WhatsApp Business QR · Hikari"><figcaption>WhatsApp · <span data-i18n="contact.scan"></span></figcaption></figure>
+        <figure><img src="assets/images/qr-instagram.png" alt="Instagram QR · @JAPANPRIVATETRANSPORT"><figcaption>Instagram · <span data-i18n="contact.scan"></span></figcaption></figure>
+      </div>
+    </div>
     <div class="form">
       <input id="f-company" data-i18n-ph="apply.company"><input id="f-country" data-i18n-ph="apply.country">
       <input id="f-contact" data-i18n-ph="apply.contact"><input id="f-email" data-i18n-ph="apply.email">

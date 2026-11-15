@@ -29,7 +29,6 @@ window.I18N['ko'] = {
   'band.tag': '일본 여행을 더 편하고 즐겁게!',
   'cta.quote': '견적 받기',
   // ── 申请表 / Application ──
-  'form.ok': '감사합니다! (데모: 전송되지 않았습니다)',
   // ── 页脚 / Footer ──
   'footer.discover': '일본을 더 발견하세요',
 };

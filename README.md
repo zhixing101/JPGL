@@ -17,13 +17,13 @@ japan-groundlink/
 │  └─ responsive.css     平板/手机适配
 ├─ js/
 │  ├─ i18n.js            多语言引擎(自动检测、回退英文、RTL)
-│  ├─ rates.js           B2B 参考净价估算器
+│  ├─ rates.js           B2B 参考净价工具(三个标签)
 │  └─ main.js            初始化、语言下拉、演示表单
 ├─ data/
-│  ├─ site.js            公司资料(占位符,请替换)
-│  └─ rates.js           演示价格表(非真实报价)
+│  ├─ site.js            公司资料(邮箱、Instagram、WhatsApp;地址/许可证号占位)
+│  └─ rates.js           B2B 参考净价数据(1 条确认价 + 演示估算)
 ├─ i18n/                 每种语言一个文件(15 个)
-├─ assets/images/        从上传图片拆出的 hero / 图标 / 车型 / 目的地
+├─ assets/images/        hero / 图标 / 车型 / 目的地,以及 qr-whatsapp.png、qr-instagram.png
 └─ tools/i18n-check.html 翻译完整度与逐条对照工具
 ```
 
@@ -42,7 +42,8 @@ B2B 新增内容(优势、价格、流程、申请表等 38 条)尚未翻译,会
 把整个文件夹上传到 GitHub Pages / Netlify 即可(index.html 放根目录)。
 
 ## 注意
-- `data/site.js` 的许可证号、地址、邮箱、电话均为占位符,请换成真实信息。
-- `data/rates.js` 是演示数值,不是真实价格。
-- 表单只做前端演示,不会发送数据;正式使用需接入邮件/CRM。
+- `data/site.js`:邮箱 Tokyo9266@gmail.com、Instagram @JAPANPRIVATETRANSPORT、WhatsApp Business(Hikari)二维码已填入;**地址和许可证号仍是占位符**,请换成真实信息。
+- `data/rates.js`:B2B 参考净价工具(机场接送 10 条路线 / 点对点 / 10 小时包车,4 种车型,附加项:举牌 +¥5,000、儿童座椅每张 +¥5,000)。
+  **只有 1 条价格是确认价**(KIX → 大阪市内 · Alphard ¥25,000,读自参考网站页面);其余是演示估算,界面显示“参考估价”。用真实报价替换后,把 key 加进 `confirmed`,界面会自动改为“确认价格”。
+- 申请表:点“提交”会打开邮件应用,收件人是 Tokyo9266@gmail.com,内容已填好(需先勾选确认);不会自动发送,也没有后台。
 - 图片从一张 1254 像素的图拆出,目的地照片分辨率较低,正式使用请换高清原图。

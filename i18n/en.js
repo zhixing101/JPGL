@@ -42,11 +42,11 @@ window.I18N['en'] = {
   'why.6': 'On-trip assistance|Direct contact for delays and changes.',
   'protect': 'Your clients always remain yours.|We never use partner passenger data for direct marketing or solicit your clients behind your back.',
   // ── 价格 / Rates ──
-  'rates.title': 'Indicative B2B net rates (demo values)',
+  'rates.title': 'B2B reference net rates',
   'rates.route': 'Route',
   'rates.car': 'Vehicle',
   'rates.price': 'Indicative net rate',
-  'rates.note': 'Demo figures only. Includes tax, tolls and parking. Final rates are confirmed after agency verification.',
+  'rates.note': 'For travel agencies, operators and DMCs only. Prices marked “Reference estimate” are not final quotes; final rates are confirmed after agency verification.',
   // ── 车队 / Fleet ──
   'fleet.title': 'Our Fleet',
   'fleet.pax': '{n} passengers',
@@ -63,7 +63,7 @@ window.I18N['en'] = {
   'proc.2': 'Agree the framework|We review needs and confirm terms.',
   'proc.3': 'Send your first request|We confirm vehicle, route and inclusions.',
   // ── 申请表 / Application ──
-  'form.ok': 'Thank you! (Demo: nothing was sent.)',
+  'form.ok': 'Thank you! Your email app will open so you can review and send the request.',
   'apply.title': 'B2B partnership application',
   'apply.company': 'Agency / company name',
   'apply.country': 'Country or main market',
@@ -75,4 +75,19 @@ window.I18N['en'] = {
   // ── 页脚 / Footer ──
   'footer.discover': 'Discover More Japan',
   'footer.note': 'B2B only: we serve verified agencies, operators and DMCs; no direct bookings from individual travelers.',
+  // ── 价格工具与联系(新增)──
+  'rates.tab.airport': 'Airport transfer',
+  'rates.tab.p2p': 'Point-to-point',
+  'rates.tab.charter': '10-hour charter',
+  'rates.dir': 'Direction',
+  'rates.dir.pickup': 'Airport pickup',
+  'rates.dir.dropoff': 'Airport drop-off',
+  'rates.km': 'Distance (km)',
+  'rates.board': 'Name-board pickup +¥5,000',
+  'rates.seat': 'Child seats (+¥5,000 each)',
+  'rates.included': '✓ Tax ✓ Expressway tolls ✓ Parking included',
+  'rates.tag.est': 'Reference estimate',
+  'rates.tag.ok': 'Confirmed rate',
+  'contact.email': 'Email',
+  'contact.scan': 'Scan to chat',
 };

@@ -29,7 +29,6 @@ window.I18N['es'] = {
   'band.tag': '¡Haz tu viaje a Japón más fácil y agradable!',
   'cta.quote': 'Pedir presupuesto',
   // ── 申请表 / Application ──
-  'form.ok': '¡Gracias! (Demo: no se envió nada.)',
   // ── 页脚 / Footer ──
   'footer.discover': 'Descubre más de Japón',
 };

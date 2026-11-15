@@ -4,6 +4,7 @@
   .hero-grid { grid-template-columns: 1fr; }
   .hero-grid figure { order: -1; }
   .rate-box { grid-template-columns: 1fr; }
+  .qrs img { width: 130px; }
   .form { grid-template-columns: 1fr; }
 }
 /* 手机:按钮上下排列 */
