@@ -5,7 +5,7 @@
 ## 本地运行
 - 方式一:双击 `index.html`(文件方式即可)。
 - 方式二(推荐,更接近线上环境):在本目录执行 `python -m http.server 8000`,浏览器打开 http://localhost:8000
-- 强制某语言:`index.html?lang=ar`(可选 zh-CN zh-TW en ja ko vi es pt fr de it ru el he ar)
+- 强制某语言:`index.html?lang=ar`(可选 zh-CN zh-TW en ja)
 
 ## 目录结构
 ```
@@ -22,7 +22,7 @@ japan-groundlink/
 ├─ data/
 │  ├─ site.js            公司资料(邮箱、Instagram、WhatsApp;地址/许可证号占位)
 │  └─ rates.js           B2B 参考净价数据(1 条确认价 + 演示估算)
-├─ i18n/                 每种语言一个文件(15 个)
+├─ i18n/                 每种语言一个文件(4 个:en / zh-CN / zh-TW / ja,均已完整翻译)
 ├─ assets/images/        hero / 图标 / 车型 / 目的地,以及 qr-whatsapp.png、qr-instagram.png
 └─ tools/i18n-check.html 翻译完整度与逐条对照工具
 ```
@@ -47,3 +47,10 @@ B2B 新增内容(优势、价格、流程、申请表等 38 条)尚未翻译,会
   **只有 1 条价格是确认价**(KIX → 大阪市内 · Alphard ¥25,000,读自参考网站页面);其余是演示估算,界面显示“参考估价”。用真实报价替换后,把 key 加进 `confirmed`,界面会自动改为“确认价格”。
 - 申请表:点“提交”会打开邮件应用,收件人是 Tokyo9266@gmail.com,内容已填好(需先勾选确认);不会自动发送,也没有后台。
 - 图片从一张 1254 像素的图拆出,目的地照片分辨率较低,正式使用请换高清原图。
+
+## 车队展示与高端视觉层(2026-11-21)
+- 车队区:顶部标签切换「Alphard 7 座」/「HiAce 10 座」,左侧大图 + 缩略图(外观、内饰、后排、行李箱、侧视),右侧规格(满载人数 / 24 寸行李数)与"查看参考价"按钮;下方为 Coaster、Bus Grande。
+- 视觉:css/premium.css(可整体移除);深色模式自动适配。
+- 图片:assets/images/fleet/;说明见 CHANGES.md。
+
+> 语言:只保留已完整翻译的 4 种(英 / 简 / 繁 / 日);其余语言待有完整译文后再按上面的方法添加。

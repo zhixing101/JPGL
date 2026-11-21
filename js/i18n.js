@@ -7,10 +7,8 @@
 (function () {
   // 支持的语言:[代码, 显示名称]。新增语言:在此加一行 + 新建 i18n/xx.js + index.html 引入。
   var LANGS = [
-    ['zh-CN','简体中文'],['zh-TW','繁體中文'],['en','English'],['ja','日本語'],['ko','한국어'],
-    ['vi','Tiếng Việt'],['es','Español'],['pt','Português'],['fr','Français'],['de','Deutsch'],
-    ['it','Italiano'],['ru','Русский'],['el','Ελληνικά'],['he','עברית'],['ar','العربية']
-  ];
+    ['zh-CN','简体中文'],['zh-TW','繁體中文'],['en','English'],['ja','日本語']
+  ];   // 只保留已完整翻译的语言
   var RTL = ['he', 'ar'];            // 从右到左的语言
   var STORE = 'gl-lang';             // localStorage 键:记住用户选择
   var listeners = [];                // 语言切换后要执行的回调(如重绘价格)

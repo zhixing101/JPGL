@@ -13,8 +13,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Japan GroundLink</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo/emblem.svg">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/premium.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -22,10 +24,7 @@
 <!-- ① 顶部导航 + 语言选择 -->
 <header class="site-header">
   <div class="bar">
-    <a class="logo" href="#top">
-      <svg width="34" height="28" viewBox="0 0 34 28" aria-hidden="true"><path d="M1 26 13 6l5 8 4-5 11 17z" fill="#2a7de1"/><path d="M13 6l-3.5 6 3 1.5 2-2 2 2.5 2.5-1z" fill="#fff"/></svg>
-      Japan GroundLink
-    </a>
+    <a class="logo" href="#top" aria-label="Japan GroundLink"><img src="assets/logo/logo-light.svg" alt="Japan GroundLink · B2B Ground Transport" width="263" height="60"></a>
     <nav class="main-nav">
       <a href="#why" data-i18n="nav.why"></a>
       <a href="#rates" data-i18n="nav.rates"></a>
@@ -34,24 +33,29 @@
       <a href="#apply" data-i18n="nav.contact"></a>
     </nav>
     <select id="lang-select" aria-label="Language"></select>
+    <a class="btn btn-gold nav-cta" href="#apply" data-i18n="nav.enquiry"></a>
   </div>
 </header>
 
 <!-- ② 首屏 Hero:左文案 + 右图 -->
 <section class="hero" id="top">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       <span class="badge" data-i18n="hero.badge"></span>
       <p class="eyebrow" data-i18n="hero.explore"></p>
       <h1 data-i18n="hero.title"></h1>
       <p class="lead" data-i18n="hero.text"></p>
-      <a class="btn" href="#apply" data-i18n="hero.cta"></a>
-      <a class="btn btn-outline" href="#why" data-i18n="hero.cap"></a>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#apply" data-i18n="hero.cta"></a>
+        <a class="btn btn-outline" href="#why" data-i18n="hero.cap"></a>
+      </div>
+      <p class="hero-sub" data-i18n="hero.sub"></p>
     </div>
-    <figure>
-      <img src="assets/images/hero.jpg" alt="Mount Fuji and Lake Kawaguchiko with cherry blossoms">
-      <figcaption data-i18n="hero.sub"></figcaption>
-    </figure>
+    <a class="hero-card" href="#fleet" aria-label="Fleet">
+      <span class="hc-label" data-i18n="hero.card"></span>
+      <span class="hc-car"><img src="assets/images/fleet/alphard-side.jpg" alt="Toyota Alphard"><span class="hc-row"><b>Alphard</b><small data-i18n="fleet.fullpax" data-pax="5"></small></span></span>
+      <span class="hc-car"><img src="assets/images/fleet/hiace-side.jpg" alt="Toyota HiAce"><span class="hc-row"><b>HiAce</b><small data-i18n="fleet.fullpax" data-pax="9"></small></span></span>
+    </a>
   </div>
 </section>
 
@@ -125,13 +129,56 @@
   <div class="wrap narrow center"><h2 data-i18n="flex" data-i18n-part="0"></h2><p class="lead" data-i18n="flex" data-i18n-part="1"></p></div>
 </section>
 
-<!-- ⑧ 车队(图片取自上传图片) -->
-<section class="alt" id="fleet">
+<!-- ⑧ 车队:Alphard / HiAce 展示(图片取自客户提供的两张车型图,裁剪在 assets/images/fleet/);Coaster / Bus 沿用原图 -->
+<section class="alt fleet" id="fleet">
   <div class="wrap">
+    <p class="kicker" data-i18n="fleet.eyebrow"></p>
     <h2 data-i18n="fleet.title"></h2>
-    <div class="grid grid-fleet">
-      <div class="fleet-card"><img src="assets/images/v1.jpg" alt="Toyota Alphard"><div class="pill"><b>Alphard</b><small data-i18n="fleet.pax" data-pax="5"></small></div></div>
-      <div class="fleet-card"><img src="assets/images/v2.jpg" alt="Toyota HiAce"><div class="pill"><b>HiAce</b><small data-i18n="fleet.pax" data-pax="9"></small></div></div>
+    <p class="sec-sub" data-i18n="fleet.sub"></p>
+    <div class="fleet-tabs" id="fleet-tabs" role="tablist">
+      <button type="button" role="tab" class="on" data-f="alphard" data-i18n="fleet.tab.alphard"></button>
+      <button type="button" role="tab" data-f="hiace" data-i18n="fleet.tab.hiace"></button>
+    </div>
+    <article class="showcase" data-f="alphard">
+      <div class="gal">
+        <figure class="gal-main" tabindex="0" aria-label="Click to enlarge"><span class="zoom-hint" data-i18n="fleet.zoom"></span><span class="lens" hidden></span><img src="assets/images/fleet/alphard-front.jpg" alt="Toyota Alphard 3rd generation front"><figcaption data-i18n="fleet.v.front"></figcaption></figure>
+        <div class="thumbs"><button type="button" class="th on" data-src="assets/images/fleet/alphard-front.jpg" data-cap="fleet.v.front"><img src="assets/images/fleet/alphard-front.jpg" alt="Toyota Alphard 3rd generation front" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/vellfire-front.jpg" data-cap="fleet.v.front"><img src="assets/images/fleet/vellfire-front.jpg" alt="Toyota Vellfire 3rd generation front" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/alphard-seats.jpg" data-cap="fleet.v.cabin"><img src="assets/images/fleet/alphard-seats.jpg" alt="Alphard second-row seats" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/alphard-rear.jpg" data-cap="fleet.v.rear"><img src="assets/images/fleet/alphard-rear.jpg" alt="Alphard rear seats" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/alphard-trunk.jpg" data-cap="fleet.v.cargo"><img src="assets/images/fleet/alphard-trunk.jpg" alt="Alphard luggage space" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/alphard-side.jpg" data-cap="fleet.v.side"><img src="assets/images/fleet/alphard-side.jpg" alt="Alphard side view" loading="lazy"></button></div>
+      </div>
+      <div class="spec">
+        <div class="big"><b>7</b><span data-i18n="fleet.seater"></span></div>
+        <h3 data-i18n="fleet.tab.alphard"></h3>
+        <p class="desc" data-i18n="fleet.alphard.desc"></p>
+        <div class="full-load">
+          <small data-i18n="fleet.full"></small>
+          <div class="fl-row"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="3.2"/><path d="M6 21v-7a6 6 0 0 1 12 0v7h-3.2v-6h-.8v6h-4v-6h-.8v6z"/></svg><span data-i18n="fleet.fullpax" data-pax="5"></span></div>
+          <div class="fl-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8v3h-1.6V4.6H9.6V6H8zM6 7h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-.6v1h-1.6v-1H8.8v1H7.2v-1H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm2.2 2.6v7.8h1.6V9.6zm6 0v7.8h1.6V9.6z"/></svg><span data-i18n="fleet.fullbag" data-pax="5"></span></div>
+        </div>
+        <p class="models" data-i18n="fleet.models"></p>
+        <p class="fine" data-i18n="fleet.note.alphard"></p>
+        <a class="btn btn-gold" href="#rates" data-car="0" data-i18n="fleet.quote"></a>
+      </div>
+    </article>
+    <article class="showcase" data-f="hiace" hidden>
+      <div class="gal">
+        <figure class="gal-main" tabindex="0" aria-label="Click to enlarge"><span class="zoom-hint" data-i18n="fleet.zoom"></span><span class="lens" hidden></span><img src="assets/images/fleet/hiace-front.jpg" alt="Toyota HiAce front"><figcaption data-i18n="fleet.v.front"></figcaption></figure>
+        <div class="thumbs"><button type="button" class="th on" data-src="assets/images/fleet/hiace-front.jpg" data-cap="fleet.v.front"><img src="assets/images/fleet/hiace-front.jpg" alt="Toyota HiAce front" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/hiace-34.jpg" data-cap="fleet.v.34"><img src="assets/images/fleet/hiace-34.jpg" alt="Toyota HiAce three-quarter view" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/hiace-in1.jpg" data-cap="fleet.v.cabin"><img src="assets/images/fleet/hiace-in1.jpg" alt="HiAce cabin" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/hiace-in2.jpg" data-cap="fleet.v.rear"><img src="assets/images/fleet/hiace-in2.jpg" alt="HiAce rear seats" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/hiace-trunk.jpg" data-cap="fleet.v.cargo"><img src="assets/images/fleet/hiace-trunk.jpg" alt="HiAce luggage space" loading="lazy"></button><button type="button" class="th" data-src="assets/images/fleet/hiace-side.jpg" data-cap="fleet.v.side"><img src="assets/images/fleet/hiace-side.jpg" alt="HiAce side view" loading="lazy"></button></div>
+      </div>
+      <div class="spec">
+        <div class="big"><b>10</b><span data-i18n="fleet.seater"></span></div>
+        <h3 data-i18n="fleet.tab.hiace"></h3>
+        <p class="desc" data-i18n="fleet.hiace.desc"></p>
+        <div class="full-load">
+          <small data-i18n="fleet.full"></small>
+          <div class="fl-row"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="3.2"/><path d="M6 21v-7a6 6 0 0 1 12 0v7h-3.2v-6h-.8v6h-4v-6h-.8v6z"/></svg><span data-i18n="fleet.fullpax" data-pax="9"></span></div>
+          <div class="fl-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8v3h-1.6V4.6H9.6V6H8zM6 7h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-.6v1h-1.6v-1H8.8v1H7.2v-1H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm2.2 2.6v7.8h1.6V9.6zm6 0v7.8h1.6V9.6z"/></svg><span data-i18n="fleet.fullbag" data-pax="9"></span></div>
+        </div>
+        
+        
+        <a class="btn btn-gold" href="#rates" data-car="1" data-i18n="fleet.quote"></a>
+      </div>
+    </article>
+    <h3 class="more-h" data-i18n="fleet.more"></h3>
+    <div class="grid grid-more">
       <div class="fleet-card"><img src="assets/images/v3.jpg" alt="Toyota Coaster"><div class="pill"><b>Coaster</b><small data-i18n="fleet.pax" data-pax="20"></small></div></div>
       <div class="fleet-card"><img src="assets/images/v4.jpg" alt="Bus Grande"><div class="pill"><b>Bus Grande</b><small data-i18n="fleet.pax" data-pax="49"></small></div></div>
     </div>
@@ -198,21 +245,34 @@
 
 <!-- ⑬ 页脚 -->
 <footer class="site-footer">
+  <img class="foot-logo" src="assets/logo/logo-dark.svg" alt="Japan GroundLink · B2B Ground Transport" width="317" height="72">
   <div class="discover"><i></i><span data-i18n="footer.discover"></span><i></i></div>
   <p data-i18n="footer.note"></p>
   <p class="copy">© Japan GroundLink · Demo</p>
 </footer>
 
+<!-- 车辆图片放大查看(js/fleet.js):滚轮/按钮缩放,拖动平移,←→ 切换,Esc 关闭 -->
+<div id="lb" class="lb" hidden role="dialog" aria-modal="true">
+  <div class="lb-stage"><img id="lb-img" alt="" draggable="false"></div>
+  <div class="lb-bar">
+    <button type="button" id="lb-prev" aria-label="Previous">‹</button>
+    <button type="button" id="lb-out" aria-label="Zoom out">−</button>
+    <span id="lb-z">100%</span>
+    <button type="button" id="lb-in" aria-label="Zoom in">＋</button>
+    <button type="button" id="lb-reset" aria-label="Reset">⟲</button>
+    <button type="button" id="lb-next" aria-label="Next">›</button>
+    <button type="button" id="lb-x" aria-label="Close">✕</button>
+  </div>
+  <p class="lb-cap" id="lb-cap"></p>
+</div>
+
 <!-- 脚本加载顺序:数据 → 翻译 → 逻辑 -->
 <script src="data/site.js"></script>
 <script src="data/rates.js"></script>
-<script src="i18n/en.js"></script><script src="i18n/zh-CN.js"></script><script src="i18n/zh-TW.js"></script>
-<script src="i18n/ja.js"></script><script src="i18n/ko.js"></script><script src="i18n/vi.js"></script>
-<script src="i18n/es.js"></script><script src="i18n/pt.js"></script><script src="i18n/fr.js"></script>
-<script src="i18n/de.js"></script><script src="i18n/it.js"></script><script src="i18n/ru.js"></script>
-<script src="i18n/el.js"></script><script src="i18n/he.js"></script><script src="i18n/ar.js"></script>
+<script src="i18n/en.js"></script><script src="i18n/zh-CN.js"></script><script src="i18n/zh-TW.js"></script><script src="i18n/ja.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/rates.js"></script>
+<script src="js/fleet.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
